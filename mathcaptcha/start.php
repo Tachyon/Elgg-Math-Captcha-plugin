@@ -26,6 +26,7 @@
 		
 		// Extend js
 		elgg_extend_view('js/elgg', 'mathcaptcha/js');
+		elgg_extend_view('js/initialise_elgg','mathcaptcha/js');
 				
 		// Default length
 		$CONFIG->captcha_length = 3;
@@ -149,7 +150,7 @@
 		
 		register_error(elgg_echo('captcha:captchafail'));
 			
-		return false;
+		//return false;
 	}
 	
 	/**
