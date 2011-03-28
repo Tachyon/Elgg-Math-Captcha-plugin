@@ -89,7 +89,7 @@ function captcha_generate_captcha($seed_token) {
  */
 function captcha_get_question($code) {
 	$question = array();
-	switch (hexdec(substr($code,1,1))%3) {
+	switch (hexdec(substr($code, 1, 1)) % 3) {
 		case 0:
 			$operator = "+";
 			$question[1] = hexdec(substr($code,0,1))+hexdec(substr($code,2,1));
@@ -167,4 +167,4 @@ function captcha_actionlist_hook($hook, $entity_type, $returnvalue, $params) {
 	return $returnvalue;
 }
 
-elgg_register_event_handler('init','system','mathcaptcha_init');
+elgg_register_event_handler('init', 'system', 'mathcaptcha_init');
